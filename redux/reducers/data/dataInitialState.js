@@ -4,7 +4,7 @@ export const dataInitialState = {
    status: loadingStatus.LOADING,
    data: null,
    dataType: null,
-   randomQuote: 1,
+   quoteID: 1,
    filter: {
       key: null,
       value: null,
