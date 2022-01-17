@@ -27,7 +27,7 @@ export const selectUniqValues = createSelector(
       const key = filter[0];
       if (!data || !key) return null;
       return data.reduce((prev, entity) => {
-         const value = entity[key];
+         const value = String(entity[key]);
          if (!prev.includes(value)) prev.push(value);
          return prev;
       }, []);
