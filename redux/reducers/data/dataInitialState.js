@@ -1,6 +1,6 @@
 import { loadingStatus } from '../../common';
 
-export const initialDataState = {
+export const dataInitialState = {
    status: loadingStatus.LOADING,
    data: null,
    dataType: null,
