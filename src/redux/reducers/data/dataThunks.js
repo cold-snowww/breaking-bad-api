@@ -33,7 +33,7 @@ export const getData = createAsyncThunk('data/getData', async (dataType) => {
 });
 
 // Get cashed data from sessionStorage
-function getCashedData(dataType) {
+export function getCashedData(dataType) {
    if (window.sessionStorage) {
       const storedData = sessionStorage.getItem(dataType);
       if (storedData) {
@@ -53,7 +53,7 @@ function getCashedData(dataType) {
 }
 
 // Cashing data in localStorage
-function cashingData(dataType, data) {
+export function cashingData(dataType, data) {
    if (window.sessionStorage) {
       try {
          const JSONReceivedData = JSON.stringify(data);
@@ -89,7 +89,7 @@ export function defineUrl(dataType) {
 }
 
 // Fetching data from url
-async function fetchData(url) {
+export async function fetchData(url) {
    if (url) {
       const response = await fetch(url);
       if (!response.ok) {
@@ -125,3 +125,15 @@ export const changeRandomQuoteID = createAsyncThunk(
       dispatch(setQuoteID(randomID));
    }
 );
+
+export function payloadCreator_QuoteID(arg, helpers) {
+   const state = helpers.getState();
+   const dispatch = helpers.dispatch;
+   const dataType = state.data.dataType;
+   // If dataType is not quotes, return
+   if (dataType !== dataTypes.QUOTE) return;
+   const quotes = state.data.data;
+   // Get random quote ID
+   const randomID = quotes[Math.round(Math.random() * quotes.length)].quote_id;
+   dispatch(setQuoteID(randomID));
+}
