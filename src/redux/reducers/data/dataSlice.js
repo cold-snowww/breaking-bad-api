@@ -19,13 +19,12 @@ const dataSlice = createSlice({
          },
          reducer(state, action) {
             const { key, value } = action.payload;
-            state.filter.key = key;
-            state.filter.value = value;
+            state.filter = [key, value];
          },
       },
       setQuoteID(state, action) {
          const newQuoteID = action.payload;
-         state.randomQuoteID = newQuoteID;
+         state.quoteID = newQuoteID;
       },
    },
    extraReducers: (builder) => {
