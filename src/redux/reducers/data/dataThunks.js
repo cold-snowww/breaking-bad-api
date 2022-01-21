@@ -4,7 +4,9 @@ import { setQuoteID } from './dataSlice';
 
 // --- getData thunk ---
 // Get data from server or SessionStorage
-export const getData = createAsyncThunk('data/getData', async (dataType) => {
+export const getData = createAsyncThunk('data/getData', payloadCreator_Data);
+
+export async function payloadCreator_Data(dataType) {
    // Try to get cashed data from local storage
    const cashedData = getCashedData(dataType);
    if (cashedData) {
@@ -30,7 +32,7 @@ export const getData = createAsyncThunk('data/getData', async (dataType) => {
       data: fetchedData,
       dataType,
    };
-});
+}
 
 // Get cashed data from sessionStorage
 export function getCashedData(dataType) {
@@ -134,6 +136,7 @@ export function payloadCreator_QuoteID(arg, helpers) {
    if (dataType !== dataTypes.QUOTE) return;
    const quotes = state.data.data;
    // Get random quote ID
-   const randomID = quotes[Math.round(Math.random() * quotes.length)].quote_id;
+   const index = Math.round(Math.random() * quotes.length);
+   const randomID = quotes[index].quote_id;
    dispatch(setQuoteID(randomID));
 }
