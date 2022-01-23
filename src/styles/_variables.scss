@@ -1,0 +1,57 @@
+@import './resolutions';
+
+:root {
+   // Font sizes
+   --fs-header: 4.5rem;
+   --fs-subheader: 2.8rem;
+   --fs-title: 2.2rem;
+   --fs-text: 1.8rem;
+
+   @media screen and (min-width: $wm) {
+      --fs-header: 5.625rem;
+      --fs-subheader: 3.5rem;
+      --fs-title: 2.5rem;
+      --fs-text: 2rem;
+   }
+
+   // Indents
+   --in-hr-n: 20px;
+   --in-vr-n: 15px;
+   --in-vr-s: 10px;
+   --in-normal: var(--in-vr) var(--in-hr);
+   --in-small: var(--in-vr-s);
+
+   // Font families
+   --ff-bb: 'BreackingBad';
+   --ff-serif: 'PTSerif';
+   --ff-radex: 'ReadexPro';
+
+   // Fonts
+   --ft-header: var(--fs-header) / 1 var(--ff-bb);
+   --ft-subheader: 700 var(--fs-subheader) / 1 var(--ff-radex);
+   --ft-title: 700 var(--fs-title) / 1.25 var(--ff-radex);
+   --ft-text: var(--fs-text) / 1.25 var(--ff-serif);
+
+   // Colors
+   --co-yellow: #f2ae30;
+   --co--yellow-t: #f2ae30d3;
+   --co-green: #182c10;
+   --co-black: #000;
+   --co-white: #fff;
+   --co-error: #ce0000;
+
+   // Gradients
+   --gr-headers: linear-gradient(90deg, #070c05, #182c10, #2d4916);
+   --gr-square: linear-gradient(
+      135deg,
+      #29a461,
+      #29a461,
+      #1e8047,
+      #145c36,
+      #014520,
+      #09331d
+   );
+
+   // Shadows
+   --bs-main: 7px 10px 10px var(--co-black);
+}
