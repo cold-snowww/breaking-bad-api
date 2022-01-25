@@ -1,0 +1,12 @@
+%full-screen {
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+}
+
+%center-block {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
