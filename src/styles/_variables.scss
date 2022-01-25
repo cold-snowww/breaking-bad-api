@@ -34,7 +34,7 @@
 
    // Colors
    --co-yellow: #f2ae30;
-   --co--yellow-t: #f2ae30d3;
+   --co-yellow-t: #f2ae30d3;
    --co-green: #182c10;
    --co-black: #000;
    --co-white: #fff;
@@ -57,4 +57,10 @@
 
    // Border
    --bd-standart: 2px solid var(--co-white);
+
+   // Layers
+   --lr-extra-b: 50;
+   --lr-menu: 100;
+   --lr-extra-t: 150;
+   --lr-alerts: 1000;
 }
