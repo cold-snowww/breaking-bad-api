@@ -1,0 +1,29 @@
+@use '../../styles/extends';
+
+.Loader {
+   @extend %full-screen;
+   @extend %center-block;
+   position: fixed;
+   background-color: var(--co-yellow-t);
+   z-index: var(--lr-alerts);
+
+   &__wrapper {
+      text-align: center;
+   }
+
+   &__image {
+      font-size: 12rem;
+   }
+
+   &__text {
+      display: inline-block;
+      position: relative;
+      font: var(--ft-title);
+
+      span {
+         position: absolute;
+         top: 0;
+         left: 100%;
+      }
+   }
+}
