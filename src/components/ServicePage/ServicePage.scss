@@ -1,0 +1,44 @@
+@use '../../styles/extends';
+
+.ServicePage {
+   @extend %full-screen;
+   @extend %center-block;
+   position: fixed;
+   padding: var(--in-normal);
+   background-color: var(--co-yellow);
+   z-index: var(--lr-alerts);
+
+   &__homelink {
+      font-weight: 700;
+      text-decoration: underline;
+   }
+
+   &__window {
+      box-shadow: var(--bs-main);
+   }
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--in-normal);
+      color: var(--co-white);
+      background-color: var(--co-error);
+   }
+
+   &__title {
+      font: var(--ft-title);
+   }
+
+   &__icon {
+      @extend %center-block;
+      font-size: var(--fs-title);
+      color: var(--co-white);
+      background-color: var(--co-error);
+   }
+
+   &__text {
+      padding: var(--in-normal);
+      font: var(--ft-text);
+      background-color: var(--co-white);
+   }
+}
