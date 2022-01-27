@@ -18,7 +18,7 @@
    --in-hr-n: 20px;
    --in-vr-n: 15px;
    --in-vr-s: 10px;
-   --in-normal: var(--in-vr) var(--in-hr);
+   --in-normal: var(--in-vr-n) var(--in-hr-n);
    --in-small: var(--in-vr-s);
 
    // Font families
@@ -30,7 +30,7 @@
    --ft-header: var(--fs-header) / 1 var(--ff-bb);
    --ft-subheader: 700 var(--fs-subheader) / 1 var(--ff-radex);
    --ft-title: 700 var(--fs-title) / 1.25 var(--ff-radex);
-   --ft-text: var(--fs-text) / 1.25 var(--ff-serif);
+   --ft-text: var(--fs-text) / 1.4 var(--ff-serif);
 
    // Colors
    --co-yellow: #f2ae30;
