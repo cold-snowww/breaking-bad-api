@@ -2,18 +2,20 @@
 
 .WelcomePageLayout {
    @extend %full-screen;
-   position: absolute;
-   background-image: url('../../images/background.jpg');
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-size: cover;
-   overflow-y: scroll;
+   position: fixed;
+   overflow: hidden;
 
    &__wrapper {
       display: grid;
       grid-template-rows: repeat(2, 100%);
       // Allows to use 100% in grid-template-rows
       height: 100%;
+      width: 100%;
+      background-image: url('../../images/background.jpg');
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow-y: auto;
    }
 
    &__topScreen {
