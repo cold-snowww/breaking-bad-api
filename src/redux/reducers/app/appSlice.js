@@ -8,8 +8,12 @@ const appSlice = createSlice({
       toggleMenuStatus(state, action) {
          state.menuStatus = !state.menuStatus;
       },
+      setImageCashed(state, action) {
+         const imgURL = action.payload;
+         state.cashedImages.push(imgURL);
+      },
    },
 });
 
-export const { toggleMenuStatus } = appSlice.actions;
+export const { toggleMenuStatus, setImageCashed } = appSlice.actions;
 export default appSlice.reducer;
