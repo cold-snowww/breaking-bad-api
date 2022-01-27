@@ -11,7 +11,7 @@ export default function Loader({ shown }) {
    return (
       <CSSTransition
          in={shown}
-         timeout={300}
+         timeout={400}
          nodeRef={ref}
          mountOnEnter
          unmountOnExit

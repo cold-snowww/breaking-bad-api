@@ -4,7 +4,7 @@
    @extend %full-screen;
    @extend %center-block;
    position: fixed;
-   background-color: var(--co-yellow-t);
+   background-color: var(--co-yellow);
    z-index: var(--lr-alerts);
 
    &__wrapper {
@@ -24,6 +24,25 @@
          position: absolute;
          top: 0;
          left: 100%;
+      }
+   }
+
+   &.enter {
+      opacity: 0;
+      &-active {
+         transition: opacity 300ms;
+         opacity: 1;
+      }
+      &-done {
+         opacity: 1;
+      }
+   }
+
+   &.exit {
+      opacity: 1;
+      &-active {
+         transition: opacity 300ms;
+         opacity: 0;
       }
    }
 }
