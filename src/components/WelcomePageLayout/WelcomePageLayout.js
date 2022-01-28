@@ -11,6 +11,7 @@ import { loadingStatus } from '../../redux/common';
 import { useEffect } from 'react';
 import { setStatus } from '../../redux/reducers/data/dataSlice';
 import usePageTitle from '../../hooks/usePageTitle';
+import Header from '../Header/Header';
 
 export default function WelcomePageLayout() {
    const [scrolled, onScroll] = useElementScroll();
@@ -41,7 +42,9 @@ export default function WelcomePageLayout() {
                style={{ backgroundPositionX: scrolled + '%' }}
             >
                <div className="WelcomePageLayout__topScreen">
-                  <div className="WelcomePageLayout__header">Header</div>
+                  <div className="WelcomePageLayout__header">
+                     <Header />
+                  </div>
                   <div className="WelcomePageLayout__contacts">Contacts</div>
                   <div className="WelcomePageLayout__main">Main</div>
                </div>

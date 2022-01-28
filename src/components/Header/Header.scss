@@ -1,0 +1,42 @@
+.Header {
+   padding: var(--in-normal);
+   background-image: var(--gr-headers);
+   border: var(--bd-standart);
+
+   &__text {
+      display: flex;
+      align-items: center;
+      font: var(--ft-header);
+      color: var(--co-white);
+   }
+
+   &__symbolWrapper {
+      display: block;
+      margin-right: 0.1em;
+      position: relative;
+      width: 1.17em;
+      height: 1.15em;
+      overflow: hidden;
+      background-image: var(--gr-square);
+
+      &:nth-of-type(3) {
+         margin-left: 0.375em;
+      }
+   }
+
+   &__symbol {
+      position: absolute;
+      left: 0;
+      top: -0.06em;
+      font-size: 1.55em;
+   }
+
+   &__wordPart {
+      display: inline-block;
+      margin-top: 0.1em;
+   }
+
+   &__titleHidden {
+      display: none;
+   }
+}
