@@ -9,11 +9,14 @@ export default function AriseTransition({
 }) {
    let defaultStyle = {
       // transition: `opacity ${duration}ms cubic-bezier(1,0,1,.5) ${delay}ms, transform ${duration}ms cubic-bezier(0,.5,.4,1) ${delay}ms`,
-      transition: `opacity ${duration}ms ease-in ${delay}ms, transform ${duration}ms ease-in ${delay}ms`,
+      // transition: `opacity ${duration}ms ease-in ${delay}ms, transform ${duration}ms ease-in ${delay}ms`,
+      transition: `opacity ${duration}ms ease-in ${
+         delay + duration / 2
+      }ms, transform ${duration}ms ease-in ${delay}ms`,
       opacity: 0,
    };
 
-   const translateValue = 100;
+   const translateValue = 30;
    const zoomValue = 0.8;
    const rotateValue = 90;
 
