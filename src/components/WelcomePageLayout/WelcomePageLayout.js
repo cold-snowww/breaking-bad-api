@@ -14,6 +14,7 @@ import usePageTitle from '../../hooks/usePageTitle';
 import Header from '../Header/Header';
 import Contacts from '../Contacts/Contacts';
 import Description from '../Description/Description';
+import Footer from '../Footer/Footer';
 
 export default function WelcomePageLayout() {
    const [scrolled, onScroll] = useElementScroll();
@@ -43,12 +44,11 @@ export default function WelcomePageLayout() {
    return (
       <>
          <Loader shown={appStatus === loadingStatus.LOADING} />
-         <div className="WelcomePageLayout">
-            <div
-               className="WelcomePageLayout__wrapper"
-               onScroll={onScroll}
-               style={{ backgroundPositionX: scrolled + '%' }}
-            >
+         <div
+            className="WelcomePageLayout"
+            style={{ backgroundPositionX: scrolled + '%' }}
+         >
+            <div className="WelcomePageLayout__wrapper" onScroll={onScroll}>
                <div className="WelcomePageLayout__topScreen">
                   <div className="WelcomePageLayout__header">
                      <Header />
@@ -64,7 +64,9 @@ export default function WelcomePageLayout() {
                   <div className="WelcomePageLayout__navigation">
                      Navigation
                   </div>
-                  <div className="WelcomePageLayout__footer">Footer</div>
+                  <div className="WelcomePageLayout__footer">
+                     <Footer />
+                  </div>
                </div>
             </div>
          </div>
