@@ -3,6 +3,10 @@
 .WelcomePageLayout {
    @extend %full-screen;
    position: fixed;
+   background-image: url('../../images/background.jpg');
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
    overflow: hidden;
 
    &__wrapper {
@@ -11,10 +15,6 @@
       // Allows to use 100% in grid-template-rows
       height: 100%;
       width: 100%;
-      background-image: url('../../images/background.jpg');
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-size: cover;
       overflow-y: auto;
       overflow-x: hidden;
    }
