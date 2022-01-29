@@ -1,12 +1,15 @@
 .Description {
+   display: flex;
+   justify-content: center;
    padding: var(--in-normal);
 
    &__message {
+      max-width: 600px;
       margin-bottom: 25px;
       padding: var(--in-small);
       font: var(--ft-text);
       background-color: var(--co-yellow-t);
-      border: var(--bd-standart);
+      border: var(--bd-main);
    }
 
    &__text {
