@@ -1,0 +1,27 @@
+@use '../../styles/extends';
+
+.Contacts {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap: 2rem;
+   padding: var(--in-normal);
+   font-size: 4rem;
+
+   &__contactLink {
+      @extend %center-block;
+      padding: 0.15em;
+      color: var(--co-white);
+      border: 1px solid var(--co-white);
+      background-image: var(--gr-square);
+      transition: box-shadow 250ms ease-in-out, border-color 250ms ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+         &:hover {
+            box-shadow: var(--bs-glow);
+            border-color: var(--co-lime);
+         }
+      }
+   }
+}
