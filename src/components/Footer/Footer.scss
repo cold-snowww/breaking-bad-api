@@ -1,0 +1,23 @@
+.Footer {
+   padding: var(--in-normal);
+   text-align: center;
+   font: var(--ft-text);
+   color: var(--co-white);
+   background-image: var(--gr-headers);
+   border: var(--bd-main);
+
+   &__creator {
+      margin-bottom: var(--in-vr-s);
+
+      a {
+         text-decoration: underline;
+         transition: color 250ms ease-in-out;
+
+         @media (hover: hover) and (pointer: fine) {
+            &:hover {
+               color: var(--co-lime);
+            }
+         }
+      }
+   }
+}
