@@ -8,10 +8,12 @@ import { shallowEqual } from 'react-redux';
 import { setImageCashed } from '../../redux/reducers/app/appSlice';
 import { selectStatus } from '../../redux/reducers/data/dataSelectors';
 import { loadingStatus } from '../../redux/common';
-import { useEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import { setStatus } from '../../redux/reducers/data/dataSlice';
 import usePageTitle from '../../hooks/usePageTitle';
 import Header from '../Header/Header';
+import Contacts from '../Contacts/Contacts';
+import Description from '../Description/Description';
 
 export default function WelcomePageLayout() {
    const [scrolled, onScroll] = useElementScroll();
@@ -32,6 +34,12 @@ export default function WelcomePageLayout() {
       }
    }, [cashedImages, appStatus, dispatch]);
 
+   // Hide body scroll
+   useLayoutEffect(() => {
+      document.body.style.overflow = 'hidden';
+      return () => (document.body.style.overflow = '');
+   }, []);
+
    return (
       <>
          <Loader shown={appStatus === loadingStatus.LOADING} />
@@ -45,8 +53,12 @@ export default function WelcomePageLayout() {
                   <div className="WelcomePageLayout__header">
                      <Header />
                   </div>
-                  <div className="WelcomePageLayout__contacts">Contacts</div>
-                  <div className="WelcomePageLayout__main">Main</div>
+                  <div className="WelcomePageLayout__contacts">
+                     <Contacts />
+                  </div>
+                  <div className="WelcomePageLayout__main">
+                     <Description />
+                  </div>
                </div>
                <div className="WelcomePageLayout__bottomScreen">
                   <div className="WelcomePageLayout__navigation">
