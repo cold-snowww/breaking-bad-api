@@ -30,11 +30,12 @@
    --ft-header: var(--fs-header) / 1 var(--ff-bb);
    --ft-subheader: 700 var(--fs-subheader) / 1 var(--ff-radex);
    --ft-title: 700 var(--fs-title) / 1.25 var(--ff-radex);
-   --ft-text: var(--fs-text) / 1.4 var(--ff-serif);
+   --ft-text: var(--fs-text) / 1.25 var(--ff-radex);
 
    // Colors
    --co-yellow: #f2ae30;
    --co-yellow-t: #f2ae30d3;
+   --co-lime: #ffe600;
    --co-green: #182c10;
    --co-black: #000;
    --co-white: #fff;
@@ -54,6 +55,8 @@
 
    // Shadows
    --bs-main: 7px 10px 10px var(--co-black);
+   // Hover glow
+   --bs-glow: 0 0 10px 5px var(--co-lime);
 
    // Border
    --bd-standart: 2px solid var(--co-white);
