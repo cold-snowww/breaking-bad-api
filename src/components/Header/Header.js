@@ -12,7 +12,7 @@ export default function Header() {
       <AriseTransition
          fire={fire}
          duration={300}
-         delay={100}
+         delay={200}
          transitionType={transitionTypes.FROM_TOP}
       >
          <header className="Header">
