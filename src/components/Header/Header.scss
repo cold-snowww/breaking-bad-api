@@ -2,6 +2,7 @@
    padding: var(--in-normal);
    background-image: var(--gr-headers);
    border: var(--bd-standart);
+   box-shadow: 0 0 15px 10px var(--co-black);
 
    &__text {
       display: flex;
