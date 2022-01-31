@@ -2,6 +2,7 @@ import { Transition } from 'react-transition-group';
 
 export default function AriseTransition({
    fire,
+   className,
    children,
    transitionType,
    delay = 0,
@@ -83,7 +84,13 @@ export default function AriseTransition({
    return (
       <Transition in={fire} timeout={duration}>
          {(state) => (
-            <div style={{ ...defaultStyle, ...transitionStyles[state] }}>
+            <div
+               className={className}
+               style={{
+                  ...defaultStyle,
+                  ...transitionStyles[state],
+               }}
+            >
                {children}
             </div>
          )}
