@@ -15,6 +15,7 @@ import Header from '../Header/Header';
 import Contacts from '../Contacts/Contacts';
 import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
+import Navigation from '../Navigation/Navigation';
 
 export default function WelcomePageLayout() {
    const [scrolled, onScroll] = useElementScroll();
@@ -62,7 +63,7 @@ export default function WelcomePageLayout() {
                </div>
                <div className="WelcomePageLayout__bottomScreen">
                   <div className="WelcomePageLayout__navigation">
-                     Navigation
+                     <Navigation />
                   </div>
                   <div className="WelcomePageLayout__footer">
                      <Footer />
