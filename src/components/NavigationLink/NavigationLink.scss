@@ -1,0 +1,19 @@
+.NavigationLink {
+   display: block;
+   border: var(--bd-main);
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--in-small);
+      font: var(--ft-title);
+      color: var(--co-white);
+      background-image: var(--gr-headers);
+   }
+
+   &__text {
+      padding: var(--in-small);
+      font: var(--ft-text);
+      background-color: var(--co-yellow-t);
+   }
+}
