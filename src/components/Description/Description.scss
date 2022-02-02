@@ -2,10 +2,10 @@
    display: flex;
    justify-content: center;
    padding: var(--in-normal);
+   padding-top: 0;
 
    &__message {
       max-width: 600px;
-      margin-bottom: 25px;
       padding: var(--in-small);
       font: var(--ft-text);
       background-color: var(--co-yellow-t);
