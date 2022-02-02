@@ -1,9 +1,9 @@
 import { AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
 import { FaTelegram } from 'react-icons/fa';
 import useAriseTransition from '../../hooks/useAriseTransition';
-import AriseTransition, {
-   transitionTypes,
-} from '../AriseTransition/AriseTransition';
+import AriseAnimation, {
+   animationTypes,
+} from '../AriseAnimation/AriseAnimation';
 import './Contacts.scss';
 
 export default function Contacts() {
@@ -11,9 +11,9 @@ export default function Contacts() {
 
    return (
       <div className="Contacts">
-         <AriseTransition
+         <AriseAnimation
             fire={fire}
-            transitionType={transitionTypes.FROM_RIGHT}
+            transitionType={animationTypes.FROM_RIGHT}
             duration={300}
             delay={300}
          >
@@ -25,10 +25,10 @@ export default function Contacts() {
             >
                <AiOutlineGithub />
             </a>
-         </AriseTransition>
-         <AriseTransition
+         </AriseAnimation>
+         <AriseAnimation
             fire={fire}
-            transitionType={transitionTypes.FROM_RIGHT}
+            transitionType={animationTypes.FROM_RIGHT}
             duration={300}
             delay={400}
          >
@@ -40,10 +40,10 @@ export default function Contacts() {
             >
                <FaTelegram />
             </a>
-         </AriseTransition>
-         <AriseTransition
+         </AriseAnimation>
+         <AriseAnimation
             fire={fire}
-            transitionType={transitionTypes.FROM_RIGHT}
+            transitionType={animationTypes.FROM_RIGHT}
             duration={300}
             delay={500}
          >
@@ -55,7 +55,7 @@ export default function Contacts() {
             >
                <AiOutlineMail />
             </a>
-         </AriseTransition>
+         </AriseAnimation>
       </div>
    );
 }

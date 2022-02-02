@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom';
 import useAriseTransition from '../../hooks/useAriseTransition';
-import AriseTransition, {
-   transitionTypes,
-} from '../AriseTransition/AriseTransition';
+import AriseAnimation, {
+   animationTypes,
+} from '../AriseAnimation/AriseAnimation';
 import './Header.scss';
 
 export default function Header() {
    const fire = useAriseTransition();
 
    return (
-      <AriseTransition
+      <AriseAnimation
          fire={fire}
          duration={300}
          delay={200}
-         transitionType={transitionTypes.FROM_TOP}
+         transitionType={animationTypes.FROM_TOP}
       >
          <header className="Header">
             <Link to="/">
@@ -32,6 +32,6 @@ export default function Header() {
             </Link>
             <h1 className="Header__titleHidden">Breaking Bad</h1>
          </header>
-      </AriseTransition>
+      </AriseAnimation>
    );
 }

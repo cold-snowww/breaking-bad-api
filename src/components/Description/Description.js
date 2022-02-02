@@ -1,16 +1,16 @@
 import useAriseTransition from '../../hooks/useAriseTransition';
-import AriseTransition, {
-   transitionTypes,
-} from '../AriseTransition/AriseTransition';
+import AriseAnimation, {
+   animationTypes,
+} from '../AriseAnimation/AriseAnimation';
 import './Description.scss';
 
 export default function Description() {
    const fire = useAriseTransition();
 
    return (
-      <AriseTransition
+      <AriseAnimation
          fire={fire}
-         transitionType={transitionTypes.FROM_LEFT}
+         transitionType={animationTypes.FROM_LEFT}
          delay={600}
          duration={300}
       >
@@ -26,6 +26,6 @@ export default function Description() {
                </p>
             </div>
          </main>
-      </AriseTransition>
+      </AriseAnimation>
    );
 }

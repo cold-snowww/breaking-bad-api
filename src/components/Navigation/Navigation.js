@@ -17,7 +17,7 @@ export default function Navigation() {
          <AriseAnimation
             fire={inView}
             className="Navigation__linkWrapper"
-            transitionType={animationTypes.ROTATE_LEFT}
+            transitionType={animationTypes.FROM_LEFT}
             delay={300}
             duration={400}
          >
