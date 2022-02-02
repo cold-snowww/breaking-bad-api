@@ -1,10 +1,13 @@
 @import '../../styles/resolutions';
 
 .NavigationLink {
-   display: block;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
    border: var(--bd-main);
 
    &__header {
+      flex: 0 0 auto;
       display: flex;
       justify-content: space-between;
       padding: var(--in-small);
@@ -14,6 +17,7 @@
    }
 
    &__text {
+      flex: 1 1 auto;
       padding: var(--in-small);
       font: var(--ft-text);
       background-color: var(--co-yellow-t);

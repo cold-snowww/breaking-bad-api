@@ -3,9 +3,14 @@
 .Navigation {
    height: 100%;
    display: grid;
-   align-content: flex-end;
+   align-content: end;
    grid-gap: var(--in-vr-n);
    padding: var(--in-normal);
+
+   @media screen and (max-height: $ws) and (orientation: 'landscape') {
+      grid-auto-flow: column;
+      grid-template-columns: repeat(3, 1fr);
+   }
 
    &__linkWrapper {
    }
