@@ -119,8 +119,6 @@ function getKeyFrames(animationType = 'fadeIn') {
    return keyframes;
 }
 
-const defaultStyle = { opacity: 0 };
-
 export default function AriseAnimation({
    fire,
    className,
@@ -156,7 +154,7 @@ export default function AriseAnimation({
             <div
                className={className}
                style={{
-                  ...defaultStyle,
+                  opacity: 0,
                }}
             >
                {children}
