@@ -9,7 +9,7 @@ import AriseAnimation, {
 
 export default function Navigation() {
    const [ref, inView] = useInView({
-      threshold: 1,
+      threshold: 0.8,
       // triggerOnce: true,
    });
    return (
