@@ -74,13 +74,6 @@ function getKeyFrames(animationType = 'fadeIn') {
       case animationTypes.FROM_BOTTOM:
          initial = translate;
          break;
-      // Zoom
-      case animationTypes.ZOOM_IN:
-         initial = 1;
-         break;
-      case animationTypes.ZOOM_OUT:
-         initial = 2;
-         break;
       // Rotate
       case animationTypes.ROTATE_LEFT:
       case animationTypes.ROTATE_RIGHT:
