@@ -21,6 +21,12 @@
    --in-normal: var(--in-vr-n) var(--in-hr-n);
    --in-small: var(--in-vr-s);
 
+   @media screen and (min-width: $wm) {
+      --in-hr-n: 30px;
+      --in-vr-n: 20px;
+      --in-vr-s: 15px;
+   }
+
    // Font families
    --ff-bb: 'BreackingBad';
    --ff-serif: 'PTSerif';
@@ -62,7 +68,10 @@
    --bd-main: 2px solid var(--co-white);
 
    // Layers
-   --lr-extra-b: 50;
+   --lr-normal: auto;
+   --lr-normal-s: 10;
+   --lr-normal-m: 20;
+   --lr-normal-l: 30;
    --lr-menu: 100;
    --lr-extra-t: 150;
    --lr-alerts: 1000;

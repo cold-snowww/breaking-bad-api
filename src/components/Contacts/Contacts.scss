@@ -10,12 +10,12 @@
    padding: var(--in-normal);
    font-size: 4rem;
 
-   @media screen and (min-width: $wxs) and (orientation: 'portrait') {
+   @media screen and (min-height: $ws) {
       flex-direction: column;
    }
 
-   @media screen and (min-width: $hm) and (orientation: 'landscape') {
-      flex-direction: column;
+   @media screen and (min-width: $wl) and (orientation: 'landscape') {
+      flex-direction: row;
    }
 
    &__contactLink {
