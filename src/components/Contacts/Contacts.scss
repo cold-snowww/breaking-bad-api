@@ -1,4 +1,5 @@
 @use '../../styles/extends';
+@import '../../styles/resolutions';
 
 .Contacts {
    height: 100%;
@@ -8,6 +9,14 @@
    gap: 2rem;
    padding: var(--in-normal);
    font-size: 4rem;
+
+   @media screen and (min-width: $wxs) and (orientation: 'portrait') {
+      flex-direction: column;
+   }
+
+   @media screen and (min-width: $hm) and (orientation: 'landscape') {
+      flex-direction: column;
+   }
 
    &__contactLink {
       @extend %center-block;

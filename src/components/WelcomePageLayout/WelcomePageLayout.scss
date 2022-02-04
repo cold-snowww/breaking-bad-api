@@ -22,17 +22,34 @@
 
    &__topScreen {
       display: grid;
-      grid-template-rows: auto auto 1fr;
+      grid-template-rows: auto 1fr auto;
    }
 
    &__header {
    }
 
    &__contacts {
+      @media screen and (min-width: $wxs) and (orientation: 'portrait') {
+         align-self: center;
+         justify-self: end;
+      }
+
+      @media screen and (min-width: $hm) and (orientation: 'landscape') {
+         align-self: center;
+         justify-self: end;
+      }
    }
 
    &__main {
       align-self: flex-end;
+
+      @media screen and (min-width: $ws) and (orientation: 'portrait') {
+         padding-bottom: 15%;
+      }
+
+      @media screen and (min-width: $hm) and (orientation: 'landscape') {
+         padding-bottom: 5%;
+      }
    }
 
    &__bottomScreen {
@@ -42,6 +59,20 @@
 
    &__navigation {
       grid-row: 1/2;
+
+      @media screen and (min-width: $wxs) and (orientation: 'portrait') {
+         max-width: 70%;
+      }
+
+      @media screen and (min-width: $ws) and (orientation: 'portrait') {
+         max-width: 50%;
+         padding-bottom: 15%;
+      }
+
+      @media screen and (min-width: $hm) and (orientation: 'landscape') {
+         max-width: 40%;
+         padding-bottom: 5%;
+      }
    }
 
    &__footer {
