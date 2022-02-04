@@ -17,7 +17,7 @@ export const animationTypes = {
    FLIP_DG: 'flipDg',
 };
 
-function getKeyFrames(animationType = 'fadeIn') {
+export function getKeyFrames(animationType = 'fadeIn') {
    // Translate, percentage
    const translate = 50;
    // Rotate, degrees
@@ -133,6 +133,7 @@ export default function AriseAnimation({
    const fireState = useRef(false);
    const ref = useRef();
 
+   // Play animation effects
    useEffect(() => {
       if (fireState.current === false && fire === true) {
          ref.current.animate(getKeyFrames(transitionType), {
