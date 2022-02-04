@@ -1,6 +1,7 @@
 /* eslint-disable default-case */
-import { Transition } from 'react-transition-group';
 import PropTypes from 'prop-types';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 export const animationTypes = {
    FROM_LEFT: 'fromLeft',
@@ -113,6 +114,7 @@ function getKeyFrames(animationType = 'fadeIn') {
    return keyframes;
 }
 
+// Component
 export default function AriseAnimation({
    fire,
    className,
@@ -128,34 +130,31 @@ export default function AriseAnimation({
       fill: 'forwards',
    };
 
+   const fireState = useRef(false);
+   const ref = useRef();
+
+   useEffect(() => {
+      if (fireState.current === false && fire === true) {
+         ref.current.animate(getKeyFrames(transitionType), {
+            ...options,
+            direction: 'normal',
+         });
+      }
+      if (fireState.current === true && fire === false) {
+         ref.current.animate(getKeyFrames(transitionType), {
+            ...options,
+            direction: 'reverse',
+         });
+      }
+      if (fireState.current !== fire) {
+         fireState.current = fire;
+      }
+   });
+
    return (
-      <Transition
-         in={fire}
-         timeout={duration}
-         onEntering={(node) =>
-            node.animate(getKeyFrames(transitionType), {
-               ...options,
-               direction: 'normal',
-            })
-         }
-         onExiting={(node) =>
-            node.animate(getKeyFrames(transitionType), {
-               ...options,
-               direction: 'reverse',
-            })
-         }
-      >
-         {() => (
-            <div
-               className={className}
-               style={{
-                  opacity: 0,
-               }}
-            >
-               {children}
-            </div>
-         )}
-      </Transition>
+      <div className={className} style={{ opacity: 0 }} ref={ref}>
+         {children}
+      </div>
    );
 }
 
