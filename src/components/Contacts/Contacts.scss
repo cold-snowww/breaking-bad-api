@@ -10,7 +10,7 @@
    padding: var(--in-normal);
    font-size: 4rem;
 
-   @media screen and (min-height: $ws) {
+   @media screen and (min-height: $ws) and (min-width: $wxs) {
       flex-direction: column;
    }
 
