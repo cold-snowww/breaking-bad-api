@@ -1,5 +1,6 @@
 /* eslint-disable default-case */
 import { Transition } from 'react-transition-group';
+import PropTypes from 'prop-types';
 
 export const animationTypes = {
    FROM_LEFT: 'fromLeft',
@@ -130,6 +131,7 @@ export default function AriseAnimation({
    return (
       <Transition
          in={fire}
+         timeout={duration}
          onEntering={(node) =>
             node.animate(getKeyFrames(transitionType), {
                ...options,
@@ -156,3 +158,12 @@ export default function AriseAnimation({
       </Transition>
    );
 }
+
+AriseAnimation.propTypes = {
+   fire: PropTypes.bool.isRequired,
+   className: PropTypes.string,
+   children: PropTypes.node,
+   transitionType: PropTypes.string,
+   delay: PropTypes.number,
+   duration: PropTypes.number,
+};
