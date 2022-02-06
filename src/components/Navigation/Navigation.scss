@@ -7,8 +7,12 @@
    grid-gap: var(--in-vr-n);
    padding: var(--in-normal);
 
-   @media screen and (max-height: $ws) and (orientation: 'landscape') {
+   @media screen and (orientation: 'landscape') {
       grid-auto-flow: column;
-      grid-template-columns: repeat(3, 1fr);
+      grid-auto-columns: 1fr;
+   }
+
+   @media screen and (min-height: $hm) {
+      grid-auto-flow: row;
    }
 }

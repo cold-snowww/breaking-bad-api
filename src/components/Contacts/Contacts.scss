@@ -10,7 +10,7 @@
    padding: var(--in-normal);
    font-size: 4rem;
 
-   @media screen and (min-height: $ws) and (min-width: $wxs) {
+   @media screen and (min-height: $hs) {
       flex-direction: column;
    }
 
@@ -24,12 +24,14 @@
       color: var(--co-white);
       border: 1px solid var(--co-white);
       background-image: var(--gr-square);
-      transition: box-shadow 250ms ease-in-out, border-color 250ms ease-in-out;
+      background-color: #1e8047;
+      transition: all 500ms ease;
 
       @media (hover: hover) and (pointer: fine) {
          &:hover {
-            box-shadow: var(--bs-glow);
-            border-color: var(--co-lime);
+            background-image: none;
+            background-color: var(--co-black);
+            color: var(--co-white);
          }
       }
    }

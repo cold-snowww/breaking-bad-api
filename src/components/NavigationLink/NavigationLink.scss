@@ -5,6 +5,29 @@
    flex-direction: column;
    height: 100%;
    border: var(--bd-main);
+   background-color: var(--co-yellow-t);
+   transition: 0.5s ease;
+
+   @media (hover: hover) and (pointer: fine) {
+      &:hover {
+         background-color: var(--co-black);
+
+         .NavigationLink__header {
+            background-image: none;
+            background-color: var(--co-black);
+         }
+
+         .NavigationLink__title {
+            text-decoration: underline;
+            transform: translateX(1em);
+         }
+
+         .NavigationLink__text {
+            color: var(--co-white);
+            transform: translateY(-0.5em);
+         }
+      }
+   }
 
    &__header {
       flex: 0 0 auto;
@@ -14,12 +37,18 @@
       font: var(--ft-title);
       color: var(--co-white);
       background-image: var(--gr-headers);
+      background-color: #182c10;
+      transition: 0.5s ease;
+   }
+
+   &__title {
+      transition: 0.5s ease;
    }
 
    &__text {
       flex: 1 1 auto;
       padding: var(--in-small);
       font: var(--ft-text);
-      background-color: var(--co-yellow-t);
+      transition: 0.5s ease;
    }
 }
