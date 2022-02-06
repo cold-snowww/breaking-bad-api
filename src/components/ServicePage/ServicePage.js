@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './ServicePage.scss';
 
-export default function ServicePage({ text, icon, title, homelink }) {
+export default function ServicePage({ text, icon, title, homelink = true }) {
    return (
       <div className="ServicePage">
          <div className="ServicePage__window">
