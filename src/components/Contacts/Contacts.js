@@ -1,14 +1,12 @@
 import { AiOutlineGithub, AiOutlineMail } from 'react-icons/ai';
 import { FaTelegram } from 'react-icons/fa';
-import useAriseTransition from '../../hooks/useAriseTransition';
 import AriseAnimation, {
    animationTypes,
 } from '../AriseAnimation/AriseAnimation';
+import PropTypes from 'prop-types';
 import './Contacts.scss';
 
-export default function Contacts() {
-   const fire = useAriseTransition();
-
+export default function Contacts({ fire }) {
    return (
       <div className="Contacts">
          <AriseAnimation
@@ -59,3 +57,7 @@ export default function Contacts() {
       </div>
    );
 }
+
+Contacts.propTypes = {
+   fire: PropTypes.bool.isRequired,
+};

@@ -1,12 +1,10 @@
-import useAriseTransition from '../../hooks/useAriseTransition';
 import AriseAnimation, {
    animationTypes,
 } from '../AriseAnimation/AriseAnimation';
+import PropTypes from 'prop-types';
 import './Description.scss';
 
-export default function Description() {
-   const fire = useAriseTransition();
-
+export default function Description({ fire }) {
    return (
       <AriseAnimation
          fire={fire}
@@ -29,3 +27,7 @@ export default function Description() {
       </AriseAnimation>
    );
 }
+
+Description.propTypes = {
+   fire: PropTypes.bool.isRequired,
+};
