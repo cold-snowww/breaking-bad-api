@@ -20,6 +20,7 @@ import Navigation from '../Navigation/Navigation';
 export default function WelcomePageLayout() {
    const [scrolled, onScroll] = useElementScroll();
    const cashedImages = useSelector(selectCashedImages, shallowEqual);
+   const imageCashed = cashedImages.includes(bgImage);
    const appStatus = useSelector(selectStatus);
    const dispatch = useDispatch();
 
@@ -27,14 +28,13 @@ export default function WelcomePageLayout() {
 
    // Seting loading status
    useEffect(() => {
-      const imageCashed = cashedImages.includes(bgImage);
       if (imageCashed && appStatus === loadingStatus.LOADING) {
          dispatch(setStatus(loadingStatus.IDLE));
       }
       if (!imageCashed && appStatus !== loadingStatus.LOADING) {
          dispatch(setStatus(loadingStatus.LOADING));
       }
-   }, [cashedImages, appStatus, dispatch]);
+   }, [imageCashed, appStatus, dispatch]);
 
    // Hide body scroll
    useLayoutEffect(() => {
@@ -74,7 +74,9 @@ export default function WelcomePageLayout() {
          <img
             src={bgImage}
             alt=""
-            onLoad={() => dispatch(setImageCashed(bgImage))}
+            onLoad={() => {
+               if (!imageCashed) dispatch(setImageCashed(bgImage));
+            }}
             hidden
          />
       </>
