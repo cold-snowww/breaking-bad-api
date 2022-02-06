@@ -22,7 +22,7 @@ export default function Navigation() {
             duration={400}
          >
             <NavigationLink
-               url="/characters"
+               url="/character"
                title="Characters"
                icon={<BsPersonBoundingBox />}
                text="Find out more about characters of your favorite TV series."
@@ -36,7 +36,7 @@ export default function Navigation() {
             duration={400}
          >
             <NavigationLink
-               url="/episodes"
+               url="/episode"
                title="Episodes"
                icon={<BiMoviePlay />}
                text="Season's episodes and release dates, characters of the episode."
@@ -50,7 +50,7 @@ export default function Navigation() {
             duration={400}
          >
             <NavigationLink
-               url="/quotes"
+               url="/quote"
                title="Quotes"
                icon={<BsChatLeftDots />}
                text="Great and unforgettable quotes from your favorite characters."
