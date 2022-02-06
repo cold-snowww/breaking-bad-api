@@ -16,6 +16,10 @@ import Contacts from '../Contacts/Contacts';
 import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
+import AriseAnimation, {
+   animationTypes,
+} from '../AriseAnimation/AriseAnimation';
+import useAriseTransition from '../../hooks/useAriseTransition';
 
 export default function WelcomePageLayout() {
    const [scrolled, onScroll] = useElementScroll();
@@ -23,6 +27,7 @@ export default function WelcomePageLayout() {
    const imageCashed = cashedImages.includes(bgImage);
    const appStatus = useSelector(selectStatus);
    const dispatch = useDispatch();
+   const fire = useAriseTransition();
 
    usePageTitle('Breaking Bad - Welcome!');
 
@@ -52,18 +57,25 @@ export default function WelcomePageLayout() {
             <div className="WelcomePageLayout__wrapper" onScroll={onScroll}>
                <div className="WelcomePageLayout__topScreen">
                   <div className="WelcomePageLayout__header">
-                     <Header />
+                     <AriseAnimation
+                        fire={fire}
+                        duration={300}
+                        delay={200}
+                        transitionType={animationTypes.FROM_TOP}
+                     >
+                        <Header />
+                     </AriseAnimation>
                   </div>
                   <div className="WelcomePageLayout__contacts">
-                     <Contacts />
+                     <Contacts fire={fire} />
                   </div>
                   <div className="WelcomePageLayout__main">
-                     <Description />
+                     <Description fire={fire} />
                   </div>
                </div>
                <div className="WelcomePageLayout__bottomScreen">
                   <div className="WelcomePageLayout__navigation">
-                     <Navigation />
+                     <Navigation fire={fire} />
                   </div>
                   <div className="WelcomePageLayout__footer">
                      <Footer />
