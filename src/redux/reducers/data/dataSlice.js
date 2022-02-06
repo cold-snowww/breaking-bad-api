@@ -26,14 +26,12 @@ const dataSlice = createSlice({
          const newQuoteID = action.payload;
          state.quoteID = newQuoteID;
       },
-      setDataType(state, action) {
-         const newDataType = action.payload;
-         state.dataType = newDataType;
-      },
    },
    extraReducers: (builder) => {
       // Fetch data from server or SessionStorage
-      builder.addCase(getData.pending, (state) => {
+      builder.addCase(getData.pending, (state, action) => {
+         const newDataType = action.meta.arg;
+         state.dataType = newDataType;
          state.status = loadingStatus.LOADING;
       });
       builder.addCase(getData.fulfilled, (state, action) => {
@@ -48,6 +46,5 @@ const dataSlice = createSlice({
    },
 });
 
-export const { setStatus, setFilter, setQuoteID, setDataType } =
-   dataSlice.actions;
+export const { setStatus, setFilter, setQuoteID } = dataSlice.actions;
 export default dataSlice.reducer;
