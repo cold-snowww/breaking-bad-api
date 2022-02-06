@@ -10,10 +10,7 @@ export async function payloadCreator_Data(dataType) {
    // Try to get cashed data from local storage
    const cashedData = getCashedData(dataType);
    if (cashedData) {
-      return {
-         dataType,
-         data: cashedData,
-      };
+      return cashedData;
    }
    // Define URL and fetch JSON data from url
    const url = defineUrl(dataType);
@@ -28,10 +25,7 @@ export async function payloadCreator_Data(dataType) {
    // Cashing data in localStorage
    cashingData(dataType, fetchedData);
 
-   return {
-      data: fetchedData,
-      dataType,
-   };
+   return fetchedData;
 }
 
 // Get cashed data from sessionStorage
