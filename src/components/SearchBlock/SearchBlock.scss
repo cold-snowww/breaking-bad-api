@@ -1,0 +1,14 @@
+@use '../../styles/extends';
+
+.SearchBlock {
+   &__header {
+      @extend %card-header-info;
+   }
+
+   &__fields {
+      display: grid;
+      grid-gap: var(--in-vr-n);
+      padding: var(--in-small);
+      background-color: var(--co-white);
+   }
+}
