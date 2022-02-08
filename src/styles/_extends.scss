@@ -10,3 +10,17 @@
    justify-content: center;
    align-items: center;
 }
+
+%card-header {
+   display: grid;
+   grid-template-columns: 1fr auto;
+   grid-auto-flow: column;
+   padding: var(--in-small);
+   font: var(--ft-title);
+   color: var(--co-white);
+}
+
+%card-header-info {
+   @extend %card-header;
+   background-image: var(--gr-headers);
+}
