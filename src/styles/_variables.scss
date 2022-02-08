@@ -2,10 +2,17 @@
 
 :root {
    // Font sizes
-   --fs-header: 4.5rem;
-   --fs-subheader: 2.8rem;
-   --fs-title: 2.2rem;
-   --fs-text: 1.8rem;
+   --fs-header: 3.5rem;
+   --fs-subheader: 2.4rem;
+   --fs-title: 2rem;
+   --fs-text: 1.6rem;
+
+   @media screen and (min-width: $wxs) {
+      --fs-header: 4.5rem;
+      --fs-subheader: 2.8rem;
+      --fs-title: 2.2rem;
+      --fs-text: 1.8rem;
+   }
 
    @media screen and (min-width: $wm) {
       --fs-header: 5.625rem;
