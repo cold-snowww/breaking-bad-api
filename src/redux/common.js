@@ -34,3 +34,20 @@ const filterKeys = {
 };
 Object.freeze(filterKeys);
 export { filterKeys };
+
+const searchStructure = {
+   [dataTypes.CHARACTER]: [
+      { fieldName: 'name', caption: 'Name' },
+      { fieldName: 'portrayed', caption: 'Actor' },
+      { fieldName: 'nickname', caption: 'Nickname' },
+   ],
+
+   [dataTypes.EPISODE]: [
+      { fieldName: 'title', caption: 'Title' },
+      { fieldName: 'season', caption: 'Season' },
+   ],
+
+   [dataTypes.QUOTE]: [{ fieldName: 'author', caption: 'Author' }],
+};
+Object.freeze(searchStructure);
+export { searchStructure };
