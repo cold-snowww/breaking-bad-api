@@ -1,4 +1,4 @@
-import { dataTypes, loadingStatus } from '../../common';
+import { dataTypes, loadingStatus, searchStructure } from '../../common';
 import * as selectors from './dataSelectors';
 
 const state = {
@@ -43,9 +43,41 @@ describe('Testing memoized selectors', () => {
    });
    test('Select filtered data returns null when filter is empty', () => {
       const stateCopy = {
-         ...state,
+         data: {
+            ...state.data,
+         },
       };
       stateCopy.data.filter = [];
       expect(selectors.selectFilteredData(stateCopy)).toBeNull();
+   });
+   test('Select unique search values', () => {
+      const stateCopy = {
+         data: {
+            ...state.data,
+         },
+      };
+      stateCopy.data.dataType = dataTypes.EPISODE;
+      stateCopy.data.data = [
+         { title: 'One', season: '1' },
+         { title: 'Two', season: '4' },
+         { title: 'Two', season: '4' },
+         { title: 'Three', season: '3' },
+         { title: 'One', season: '2' },
+      ];
+
+      const expectedValue = [
+         {
+            fieldName: 'title',
+            caption: 'Title',
+            uniqValues: ['One', 'Two', 'Three'],
+         },
+         {
+            fieldName: 'season',
+            caption: 'Season',
+            uniqValues: ['1', '4', '3', '2'],
+         },
+      ];
+
+      expect(selectors.selectSearchValues(stateCopy)).toEqual(expectedValue);
    });
 });
