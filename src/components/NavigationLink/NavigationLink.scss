@@ -1,3 +1,4 @@
+@use '../../styles/extends';
 @import '../../styles/resolutions';
 
 .NavigationLink {
@@ -30,13 +31,7 @@
    }
 
    &__header {
-      flex: 0 0 auto;
-      display: flex;
-      justify-content: space-between;
-      padding: var(--in-small);
-      font: var(--ft-title);
-      color: var(--co-white);
-      background-image: var(--gr-headers);
+      @extend %card-header-info;
       background-color: #182c10;
       transition: 0.5s ease;
    }
