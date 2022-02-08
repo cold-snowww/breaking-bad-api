@@ -1,0 +1,44 @@
+@use '../../styles/extends';
+
+.SearchField {
+   &__options {
+      @extend %full-screen;
+      position: fixed;
+      padding: var(--in-normal);
+      background-color: var(--co-yellow-t);
+
+      &.enter {
+         opacity: 0;
+
+         &-active {
+            opacity: 1;
+            transition: opacity 300ms ease-in;
+         }
+      }
+
+      &.exit {
+         display: none;
+      }
+   }
+
+   &__wrapper {
+      height: 100%;
+      padding: var(--in-normal);
+      background-color: var(--co-white);
+      overflow: hidden;
+   }
+
+   &__title {
+      font: var(--ft-text);
+   }
+
+   &__list {
+      height: 100%;
+      overflow-y: auto;
+      font: var(--ft-text);
+   }
+
+   &__link {
+      line-height: 1.5;
+   }
+}
