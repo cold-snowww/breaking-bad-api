@@ -17,7 +17,7 @@ export const selectFilteredData = createSelector(
    (data, filter) => {
       const [key, value] = filter;
       if (!data || !key || !value) return null;
-      return data.filter((entity) => String(entity[key]) === value);
+      return data.filter((entity) => String(entity[key]).trim() === value);
    }
 );
 
@@ -29,7 +29,7 @@ export const selectSearchValues = createSelector(
       const searchValues = searchStructure[dataType].map((field) => {
          const uniqValues = [];
          data.forEach((entity) => {
-            const fieldValue = entity[field.fieldName];
+            const fieldValue = String(entity[field.fieldName]).trim();
             if (!uniqValues.includes(fieldValue)) uniqValues.push(fieldValue);
          });
          return {
