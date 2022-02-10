@@ -7,6 +7,7 @@ import { selectMenuStatus } from '../../redux/reducers/app/appSelectors';
 import { toggleMenuStatus } from '../../redux/reducers/app/appSlice';
 import { selectStatus } from '../../redux/reducers/data/dataSelectors';
 import Burger from '../Burger/Burger';
+import CardHolder from '../CardHolder/CardHolder';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -50,6 +51,7 @@ export default function DataPageLayout() {
                      <Menu />
                   </div>
                </CSSTransition>
+               <CardHolder />
             </div>
             <div className="DataPageLayout__footer">
                <Footer />
