@@ -1,0 +1,12 @@
+@use '../../styles/extends';
+
+.MenuSectionLinks {
+   display: grid;
+   grid-auto-flow: column;
+   grid-template-columns: 1fr 1fr;
+   grid-column-gap: var(--in-hr-n);
+
+   &__link {
+      @extend %button-link;
+   }
+}
