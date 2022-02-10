@@ -5,7 +5,6 @@ const loadingStatus = {
    ERROR: 'error',
 };
 Object.freeze(loadingStatus);
-export { loadingStatus };
 
 // Data types
 const dataTypes = {
@@ -14,27 +13,8 @@ const dataTypes = {
    QUOTE: 'quote',
 };
 Object.freeze(dataTypes);
-export { dataTypes };
 
-// Filter keys
-const filterKeys = {
-   CHARACTER: {
-      NAME: 'name',
-      ACTOR: 'portrayed',
-      NICK: 'nickname',
-   },
-   EPISODE: {
-      TITLE: 'title',
-      SEASON: 'season',
-   },
-   QUOTE: {
-      ID: 'quote_id',
-      AUTHOR: 'author',
-   },
-};
-Object.freeze(filterKeys);
-export { filterKeys };
-
+// Search structure
 const searchStructure = {
    [dataTypes.CHARACTER]: [
       { fieldName: 'name', caption: 'Name' },
@@ -50,4 +30,12 @@ const searchStructure = {
    [dataTypes.QUOTE]: [{ fieldName: 'author', caption: 'Author' }],
 };
 Object.freeze(searchStructure);
-export { searchStructure };
+
+const sectionURLs = [
+   { dataType: dataTypes.CHARACTER, caption: 'Characters', url: '/character' },
+   { dataType: dataTypes.EPISODE, caption: 'Episodes', url: '/episode' },
+   { dataType: dataTypes.QUOTE, caption: 'Quotes', url: '/quote' },
+];
+Object.freeze(sectionURLs);
+
+export { loadingStatus, dataTypes, searchStructure, sectionURLs };
