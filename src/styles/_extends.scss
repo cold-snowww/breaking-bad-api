@@ -24,3 +24,12 @@
    @extend %card-header;
    background-image: var(--gr-headers);
 }
+
+%button-link {
+   display: block;
+   padding: var(--in-small);
+   text-align: center;
+   font: var(--ft-title);
+   color: var(--co-white);
+   background-color: var(--co-green);
+}
