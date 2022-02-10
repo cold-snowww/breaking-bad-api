@@ -6,6 +6,7 @@
    align-content: end;
    grid-gap: var(--in-vr-n);
    padding: var(--in-normal);
+   padding-bottom: 20px;
 
    @media screen and (orientation: 'landscape') {
       grid-auto-flow: column;
