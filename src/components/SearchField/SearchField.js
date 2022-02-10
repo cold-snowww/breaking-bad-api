@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { toggleMenuStatus } from '../../redux/reducers/app/appSlice';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import './SearchField.scss';
 
 export default function SearchField({
@@ -34,6 +35,12 @@ export default function SearchField({
          >
             <div className="SearchField__options" ref={ref}>
                <div className="SearchField__wrapper">
+                  <button
+                     className="SearchField__close"
+                     onClick={() => setActiveField(null)}
+                  >
+                     <AiOutlineCloseCircle />
+                  </button>
                   <ul className="SearchField__list">
                      {uniqValues.map((val) => (
                         <li
