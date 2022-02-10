@@ -6,9 +6,8 @@
    }
 
    &__fields {
+      @extend %card-text;
       display: grid;
       grid-gap: var(--in-vr-n);
-      padding: var(--in-small);
-      background-color: var(--co-white);
    }
 }
