@@ -25,6 +25,12 @@
    background-image: var(--gr-headers);
 }
 
+%card-text {
+   padding: var(--in-small);
+   font: var(--ft-text);
+   background-color: var(--co-white);
+}
+
 %button-link {
    display: block;
    padding: var(--in-small);
