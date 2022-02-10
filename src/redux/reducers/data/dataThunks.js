@@ -108,18 +108,7 @@ class FetchingError extends Error {
 // Change randomQuoteID field by random id
 export const changeRandomQuoteID = createAsyncThunk(
    'data/setRandomQuote',
-   async (arg, helpers) => {
-      const state = helpers.getState();
-      const dispatch = helpers.dispatch;
-      const dataType = state.data.dataType;
-      // If dataType is not quotes, return
-      if (dataType !== dataTypes.QUOTE) return;
-      const quotes = state.data.data;
-      // Get random quote ID
-      const randomID =
-         quotes[Math.round(Math.random() * quotes.length)].quote_id;
-      dispatch(setQuoteID(randomID));
-   }
+   payloadCreator_QuoteID
 );
 
 export function payloadCreator_QuoteID(arg, helpers) {
