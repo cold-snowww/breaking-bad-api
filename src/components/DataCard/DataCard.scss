@@ -1,0 +1,27 @@
+@use '../../styles/extends';
+
+.DataCard {
+   &__header {
+      @extend %card-header-info;
+   }
+
+   &__text {
+      @extend %card-text;
+   }
+
+   &__info {
+      @extend %card-text;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+   }
+
+   &__field {
+      font-weight: 700;
+   }
+
+   &__valueList {
+      padding-left: 1em;
+      list-style: disc;
+   }
+}
