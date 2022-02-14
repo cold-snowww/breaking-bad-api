@@ -47,8 +47,9 @@ export default function SearchField({
                            className="SearchField__listItem"
                            key={val}
                            onClick={() => {
-                              setActiveField(null);
+                              // setActiveField(null);
                               dispatch(toggleMenuStatus());
+                              setTimeout(() => setActiveField(null), 700);
                            }}
                         >
                            <Link
