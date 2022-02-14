@@ -36,10 +36,8 @@ export default function CardHolder() {
          {!dataArray ? (
             <EmptyDataCard />
          ) : (
-            dataArray.map((entity) => <Card data={entity} />)
+            dataArray.map((entity, index) => <Card data={entity} key={index} />)
          )}
       </main>
    );
 }
-
-// Добавить анимацию исчезновения - появления карточек
