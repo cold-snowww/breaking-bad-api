@@ -1,7 +1,0 @@
-@use '../../../styles/extends';
-
-.EmptyDataCard {
-   &__text {
-      @extend %card-text;
-   }
-}
