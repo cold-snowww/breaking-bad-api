@@ -6,8 +6,8 @@ import {
 } from '../../redux/reducers/data/dataSelectors';
 import CharacterDataCard from '../DataCard/CharacterDataCard/CharacterDataCard';
 import EmptyDataCard from '../DataCard/EmptyDataCard/EmptyDataCard';
-import EpisodeDataCard from '../DataCard/EpisodeDataCard';
-import QuoteDataCard from '../DataCard/QuoteDataCard';
+import EpisodeDataCard from '../DataCard/EpisodeDataCard/EpisodeDataCard';
+import QuoteDataCard from '../DataCard/QuoteDataCard/QuoteDataCard';
 import './CardHolder.scss';
 
 export default function CardHolder() {
