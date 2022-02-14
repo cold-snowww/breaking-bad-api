@@ -7,7 +7,7 @@ import {
    selectFilter,
    selectStatus,
 } from '../../redux/reducers/data/dataSelectors';
-import { setFilter, setStatus } from '../../redux/reducers/data/dataSlice';
+import { clearFilter, setStatus } from '../../redux/reducers/data/dataSlice';
 import WelcomePageLayout from '../WelcomePageLayout/WelcomePageLayout';
 
 export default function WelcomePage() {
@@ -21,7 +21,7 @@ export default function WelcomePage() {
          dispatch(setStatus(loadingStatus.IDLE));
       }
       if (filter[0] || filter[1]) {
-         dispatch(setFilter(null, null));
+         dispatch(clearFilter());
       }
    }, [appStatus, filter, dispatch]);
 
