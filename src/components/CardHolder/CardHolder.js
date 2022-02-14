@@ -4,7 +4,7 @@ import {
    selectDataType,
    selectFilteredData,
 } from '../../redux/reducers/data/dataSelectors';
-import CharacterDataCard from '../DataCard/CharacterDataCard';
+import CharacterDataCard from '../DataCard/CharacterDataCard/CharacterDataCard';
 import EmptyDataCard from '../DataCard/EmptyDataCard';
 import EpisodeDataCard from '../DataCard/EpisodeDataCard';
 import QuoteDataCard from '../DataCard/QuoteDataCard';

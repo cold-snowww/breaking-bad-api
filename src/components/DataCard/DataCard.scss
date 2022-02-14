@@ -5,10 +5,6 @@
       @extend %card-header-info;
    }
 
-   &__text {
-      @extend %card-text;
-   }
-
    &__info {
       @extend %card-text;
       display: grid;
