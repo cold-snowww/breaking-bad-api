@@ -29,6 +29,7 @@
       left: 0;
       height: 100%;
       width: 100%;
+      z-index: var(--lr-normal-m);
 
       &.enter {
          opacity: 0;
