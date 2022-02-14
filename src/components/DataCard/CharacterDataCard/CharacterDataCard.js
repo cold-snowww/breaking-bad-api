@@ -12,14 +12,14 @@ export default function CharacterDataCard({ data }) {
    // Reset imgLoaded when card changes
    useEffect(() => {
       setimageLoaded(false);
-      console.log('Loaded: false!');
    }, [data.name]);
+
    // Start card animation
-   useEffect(() => {
-      if (imageLoaded) {
-         console.log('Animation!');
-      }
-   }, [imageLoaded]);
+   // useEffect(() => {
+   //    if (imageLoaded) {
+   //       console.log('Animation!');
+   //    }
+   // }, [imageLoaded]);
 
    return (
       <DataCard title={data.name} icon={<BsPersonBoundingBox />}>
@@ -31,7 +31,11 @@ export default function CharacterDataCard({ data }) {
                alt={data.name}
                onLoad={() => setimageLoaded(true)}
             />
-            <div className="CharacterDataCard__imageLoader">
+            <div
+               className={`CharacterDataCard__imageLoader${
+                  imageLoaded ? ' hidden' : ''
+               }`}
+            >
                <div className="CharacterDataCard__spinner">
                   <Spinner type={12} />
                </div>
@@ -41,15 +45,15 @@ export default function CharacterDataCard({ data }) {
             </div>
          </div>
          <div className="DataCard__info">
-            <div className="DataCard__field">Nickname:</div>
-            <div className="DataCard__value">{data.nickname}</div>
-            <div className="DataCard__field">Birthday:</div>
-            <div className="DataCard__value">{data.birthday}</div>
-            <div className="DataCard__field">Аctor:</div>
-            <div className="DataCard__value">{data.portrayed}</div>
-            <div className="DataCard__field">Status:</div>
-            <div className="DataCard__value">{data.status}</div>
-            <div className="DataCard__field">Occupation:</div>
+            <p className="DataCard__field">Nickname:</p>
+            <p className="DataCard__value">{data.nickname}</p>
+            <p className="DataCard__field">Birthday:</p>
+            <p className="DataCard__value">{data.birthday}</p>
+            <p className="DataCard__field">Аctor:</p>
+            <p className="DataCard__value">{data.portrayed}</p>
+            <p className="DataCard__field">Status:</p>
+            <p className="DataCard__value">{data.status}</p>
+            <p className="DataCard__field">Occupation:</p>
             <div className="DataCard__value">
                <ul className="DataCard__valueList">
                   {data.occupation.map((val) => (
