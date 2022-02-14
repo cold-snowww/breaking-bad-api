@@ -26,6 +26,9 @@ const dataSlice = createSlice({
          const newQuoteID = action.payload;
          state.quoteID = newQuoteID;
       },
+      clearFilter(state, action) {
+         state.filter = [];
+      },
    },
    extraReducers: (builder) => {
       // Fetch data from server or SessionStorage
@@ -46,5 +49,6 @@ const dataSlice = createSlice({
    },
 });
 
-export const { setStatus, setFilter, setQuoteID } = dataSlice.actions;
+export const { setStatus, setFilter, setQuoteID, clearFilter } =
+   dataSlice.actions;
 export default dataSlice.reducer;
