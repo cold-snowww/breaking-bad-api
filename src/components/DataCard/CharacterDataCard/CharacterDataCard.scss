@@ -1,0 +1,39 @@
+@use '../../../styles/extends';
+
+.CharacterDataCard {
+   &__image {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         min-height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__imageFiller {
+      padding-top: 110%;
+   }
+
+   &__imageLoader {
+      @extend %full-screen;
+      position: absolute;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      grid-row-gap: var(--in-vr-n);
+      font: var(--ft-text);
+      color: var(--co-white);
+      background-color: var(--co-black);
+   }
+
+   &__spinner {
+      font-size: 2.5rem;
+      color: var(--co-white);
+   }
+}
