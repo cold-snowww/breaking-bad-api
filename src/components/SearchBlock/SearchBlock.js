@@ -6,10 +6,23 @@ import SearchField from '../SearchField/SearchField';
 import { AiOutlineSearch } from 'react-icons/ai';
 import './SearchBlock.scss';
 import { sectionURLs } from '../../redux/common';
+import { useEffect } from 'react';
 
 export default function SearchBlock({ dataType }) {
    const searchValues = useSelector(selectSearchValues);
    const [activeField, setActiveField] = useState(null);
+
+   // Block body scroll
+   useEffect(() => {
+      if (activeField !== null) {
+         document.body.style.height = '100vh';
+         document.body.style.overflowY = 'hidden';
+      }
+      return () => {
+         document.body.style.height = '';
+         document.body.style.overflowY = '';
+      };
+   }, [activeField]);
 
    return (
       <div className="SearchBlock">
