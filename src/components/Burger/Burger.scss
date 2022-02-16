@@ -1,7 +1,13 @@
+@import '../../styles/resolutions';
+
 .Burger {
    width: 6.8rem;
    height: 6.8rem;
    color: var(--co-white);
+
+   @media screen and (min-width: $wm) {
+      margin-right: 2em;
+   }
 }
 .ham {
    cursor: pointer;
