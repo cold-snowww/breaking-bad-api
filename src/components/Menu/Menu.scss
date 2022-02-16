@@ -1,3 +1,5 @@
+@import '../../styles/resolutions';
+
 .Menu {
    display: grid;
    align-content: start;
@@ -7,4 +9,9 @@
    padding: var(--in-hr-n);
    background-color: var(--co-yellow);
    overflow: hidden auto;
+
+   @media screen and (min-width: $ws) {
+      grid-template-columns: 560px;
+      justify-content: center;
+   }
 }

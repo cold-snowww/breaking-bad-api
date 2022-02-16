@@ -1,7 +1,14 @@
+@import '../../styles/resolutions';
+
 .CardHolder {
    display: grid;
    grid-row-gap: var(--in-vr-n);
    align-content: start;
    height: 100%;
    padding: var(--in-hr-n);
+
+   @media screen and (min-width: $ws) {
+      grid-template-columns: 560px;
+      justify-content: center;
+   }
 }
