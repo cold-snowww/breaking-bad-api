@@ -36,8 +36,7 @@
 
    // Font families
    --ff-bb: 'BreackingBad';
-   --ff-serif: 'PTSerif';
-   --ff-radex: 'ReadexPro';
+   --ff-radex: 'ReadexPro', 'Tahoma', 'Arial', sans-serif;
 
    // Fonts
    --ft-header: var(--fs-header) / 1 var(--ff-bb);
