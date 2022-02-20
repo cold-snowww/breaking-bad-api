@@ -42,7 +42,7 @@ export default function DataPageLayout() {
             <div className="DataPageLayout__main">
                <CSSTransition in={menuIsOpen} timeout={400} nodeRef={ref}>
                   <div className="DataPageLayout__menu" ref={ref}>
-                     {appStatus === loadingStatus.IDLE ? <Menu /> : null}
+                     <Menu />
                   </div>
                </CSSTransition>
                <CardHolder />
