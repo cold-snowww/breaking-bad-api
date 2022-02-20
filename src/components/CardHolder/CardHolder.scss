@@ -8,7 +8,11 @@
    padding: var(--in-hr-n);
 
    @media screen and (min-width: $ws) {
-      grid-template-columns: 560px;
+      grid-template-columns: minmax(auto, 560px);
       justify-content: center;
+   }
+
+   @media screen and (min-width: $wl) {
+      padding: 0;
    }
 }

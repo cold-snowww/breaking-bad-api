@@ -14,7 +14,7 @@
       flex-direction: column;
    }
 
-   @media screen and (min-width: $wl) and (orientation: 'landscape') {
+   @media screen and (min-width: $wl) {
       flex-direction: row;
    }
 
@@ -25,13 +25,18 @@
       border: 1px solid var(--co-white);
       background-image: var(--gr-square);
       background-color: #1e8047;
-      transition: all 500ms ease;
+      transition: background-color 300ms ease;
+
+      @media screen and (min-width: $wl) {
+         background-image: none;
+         background-color: transparent;
+      }
 
       @media (hover: hover) and (pointer: fine) {
          &:hover {
+            outline: 1px solid var(--co-white);
             background-image: none;
             background-color: var(--co-black);
-            color: var(--co-white);
          }
       }
    }

@@ -2,6 +2,8 @@
 @import '../../styles/resolutions';
 
 .SearchField {
+   cursor: pointer;
+
    &__options {
       @extend %full-screen;
       position: fixed;
@@ -9,9 +11,18 @@
       background-color: var(--co-yellow-t);
       z-index: var(--lr-normal-l);
 
+      @media screen and (min-width: $wl) {
+         position: absolute;
+         padding: 0;
+      }
+
       &.enter {
          opacity: 0;
          transform: scale(0.01);
+
+         @media screen and (min-width: $wl) {
+            transform: none;
+         }
 
          &-active {
             opacity: 1;
@@ -22,6 +33,18 @@
 
       &.exit {
          display: none;
+
+         @media screen and (min-width: $wl) {
+            display: block;
+            opacity: 1;
+         }
+
+         &-active {
+            @media screen and (min-width: $wl) {
+               opacity: 0;
+               transition: opacity 300ms ease-in;
+            }
+         }
       }
    }
 
@@ -52,5 +75,6 @@
    &__link {
       display: block;
       line-height: 1.5;
+      cursor: pointer;
    }
 }
