@@ -5,11 +5,15 @@ import App from './App';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/store/store';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 ReactDOM.render(
    <React.StrictMode>
       <Provider store={store}>
-         <App />
+         <ErrorBoundary fallback={<ErrorPage homelink={false} />}>
+            <App />
+         </ErrorBoundary>
       </Provider>
    </React.StrictMode>,
    document.getElementById('root')
