@@ -40,15 +40,9 @@ export default function DataPageLayout() {
                <Burger />
             </div>
             <div className="DataPageLayout__main">
-               <CSSTransition
-                  in={menuIsOpen}
-                  timeout={400}
-                  nodeRef={ref}
-                  mountOnEnter
-                  unmountOnExit
-               >
+               <CSSTransition in={menuIsOpen} timeout={400} nodeRef={ref}>
                   <div className="DataPageLayout__menu" ref={ref}>
-                     <Menu />
+                     {appStatus === loadingStatus.IDLE ? <Menu /> : null}
                   </div>
                </CSSTransition>
                <CardHolder />

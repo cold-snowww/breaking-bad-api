@@ -47,6 +47,7 @@ export default function SearchField({
                            className="SearchField__listItem"
                            key={val}
                            onClick={() => {
+                              setActiveField(null);
                               dispatch(toggleMenuStatus());
                            }}
                         >

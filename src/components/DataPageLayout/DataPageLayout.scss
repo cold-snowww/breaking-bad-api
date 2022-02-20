@@ -24,6 +24,7 @@
    }
 
    &__menu {
+      display: none;
       position: absolute;
       top: 0;
       left: 0;
@@ -32,16 +33,23 @@
       z-index: var(--lr-normal-m);
 
       &.enter {
+         display: block;
          opacity: 0;
 
          &-active {
             opacity: 1;
             transition: opacity 0.4s ease-in-out;
          }
+
+         &-done {
+            display: block;
+            opacity: 1;
+         }
       }
 
       &.exit {
          opacity: 1;
+         display: block;
 
          &-active {
             opacity: 0;
@@ -49,6 +57,7 @@
          }
 
          &-done {
+            display: none;
             opacity: 0;
          }
       }
