@@ -148,7 +148,7 @@ export default function AriseAnimation({
             direction: 'reverse',
          });
       }
-      if (fireState.current !== fire) {
+      if (fireState.current !== fire && !fixed) {
          fireState.current = fire;
       }
    });
@@ -161,7 +161,7 @@ export default function AriseAnimation({
 }
 
 AriseAnimation.propTypes = {
-   fire: PropTypes.bool.isRequired,
+   fire: PropTypes.bool,
    className: PropTypes.string,
    children: PropTypes.node,
    transitionType: PropTypes.string,
