@@ -62,5 +62,5 @@ export default function Contacts({ fire, className, fixed }) {
 }
 
 Contacts.propTypes = {
-   fire: PropTypes.bool.isRequired,
+   fire: PropTypes.bool,
 };
