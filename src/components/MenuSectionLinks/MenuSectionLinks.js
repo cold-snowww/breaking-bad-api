@@ -1,12 +1,17 @@
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { sectionURLs } from '../../redux/common';
+import { selectDataType } from '../../redux/reducers/data/dataSelectors';
 import { clearFilter } from '../../redux/reducers/data/dataSlice';
 import './MenuSectionLinks.scss';
 
-export default function MenuSectionLinks({ dataType, className }) {
+export default function MenuSectionLinks({ className }) {
    const dispatch = useDispatch();
+   const dataType = useSelector(selectDataType);
+
+   if (!dataType) return null;
 
    return (
       <div
@@ -31,5 +36,5 @@ export default function MenuSectionLinks({ dataType, className }) {
 }
 
 MenuSectionLinks.propTypes = {
-   dataType: PropTypes.string.isRequired,
+   className: PropTypes.string,
 };

@@ -19,7 +19,7 @@ export default function Menu() {
       <div className="Menu">
          <SearchBlock dataType={dataType} />
          <RandomQuoteBtn dataType={dataType} />
-         <MenuSectionLinks dataType={dataType} />
+         <MenuSectionLinks />
       </div>
    );
 }
