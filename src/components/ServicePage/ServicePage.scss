@@ -40,4 +40,9 @@
       font: var(--ft-text);
       background-color: var(--co-white);
    }
+
+   &__error {
+      word-break: break-all;
+      color: var(--co-error);
+   }
 }

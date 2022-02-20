@@ -11,7 +11,9 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 ReactDOM.render(
    <React.StrictMode>
       <Provider store={store}>
-         <ErrorBoundary fallback={<ErrorPage homelink={false} />}>
+         <ErrorBoundary
+            fallback={(error) => <ErrorPage error={error} homelink={false} />}
+         >
             <App />
          </ErrorBoundary>
       </Provider>
