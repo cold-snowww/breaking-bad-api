@@ -11,7 +11,8 @@ export default function ErrorPage({ homelink }) {
          icon={<AiOutlineBug />}
          text={
             <span>
-               Ooops... something went wrong.
+               Something went wrong. Please, try refresh the page, or go to
+               homepage, if it's doesn't help, we're sorry...
                <br /> We will fix it soon!
             </span>
          }
