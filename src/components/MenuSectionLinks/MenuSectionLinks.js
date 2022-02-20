@@ -5,11 +5,15 @@ import { sectionURLs } from '../../redux/common';
 import { clearFilter } from '../../redux/reducers/data/dataSlice';
 import './MenuSectionLinks.scss';
 
-export default function MenuSectionLinks({ dataType }) {
+export default function MenuSectionLinks({ dataType, className }) {
    const dispatch = useDispatch();
 
    return (
-      <div className="MenuSectionLinks">
+      <div
+         className={
+            className ? `MenuSectionLinks ${className}` : 'MenuSectionLinks'
+         }
+      >
          {sectionURLs
             .filter((url) => url.dataType !== dataType)
             .map(({ dataType, url, caption }) => (
