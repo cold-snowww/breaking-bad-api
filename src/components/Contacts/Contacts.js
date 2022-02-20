@@ -6,12 +6,13 @@ import AriseAnimation, {
 import PropTypes from 'prop-types';
 import './Contacts.scss';
 
-export default function Contacts({ fire }) {
+export default function Contacts({ fire, className, fixed }) {
    return (
-      <div className="Contacts">
+      <div className={className ? `Contacts ${className}` : 'Contacts'}>
          <AriseAnimation
             fire={fire}
             transitionType={animationTypes.FROM_RIGHT}
+            fixed={fixed}
             duration={300}
             delay={300}
          >
@@ -27,6 +28,7 @@ export default function Contacts({ fire }) {
          <AriseAnimation
             fire={fire}
             transitionType={animationTypes.FROM_RIGHT}
+            fixed={fixed}
             duration={300}
             delay={400}
          >
@@ -42,6 +44,7 @@ export default function Contacts({ fire }) {
          <AriseAnimation
             fire={fire}
             transitionType={animationTypes.FROM_RIGHT}
+            fixed={fixed}
             duration={300}
             delay={500}
          >
