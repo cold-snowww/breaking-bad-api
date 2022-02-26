@@ -119,7 +119,7 @@ export default function AriseAnimation({
    fire,
    className,
    children,
-   transitionType,
+   animationType,
    fixed = false,
    delay = 0,
    duration = 500,
@@ -137,13 +137,13 @@ export default function AriseAnimation({
    // Play animation effects
    useEffect(() => {
       if (fireState.current === false && fire === true && !fixed) {
-         ref.current.animate(getKeyFrames(transitionType), {
+         ref.current.animate(getKeyFrames(animationType), {
             ...options,
             direction: 'normal',
          });
       }
       if (fireState.current === true && fire === false && !fixed) {
-         ref.current.animate(getKeyFrames(transitionType), {
+         ref.current.animate(getKeyFrames(animationType), {
             ...options,
             direction: 'reverse',
          });
@@ -164,7 +164,7 @@ AriseAnimation.propTypes = {
    fire: PropTypes.bool,
    className: PropTypes.string,
    children: PropTypes.node,
-   transitionType: PropTypes.string,
+   animationType: PropTypes.string,
    fixed: PropTypes.bool,
    delay: PropTypes.number,
    duration: PropTypes.number,

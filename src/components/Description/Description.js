@@ -8,7 +8,7 @@ export default function Description({ fire }) {
    return (
       <AriseAnimation
          fire={fire}
-         transitionType={animationTypes.FROM_LEFT}
+         animationType={animationTypes.FROM_LEFT}
          delay={600}
          duration={300}
       >

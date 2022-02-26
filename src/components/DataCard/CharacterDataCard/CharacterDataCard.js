@@ -14,13 +14,6 @@ export default function CharacterDataCard({ data }) {
       setimageLoaded(false);
    }, [data.name]);
 
-   // Start card animation
-   // useEffect(() => {
-   //    if (imageLoaded) {
-   //       console.log('Animation!');
-   //    }
-   // }, [imageLoaded]);
-
    return (
       <DataCard title={data.name} icon={<BsPersonBoundingBox />}>
          <div className="CharacterDataCard__image">

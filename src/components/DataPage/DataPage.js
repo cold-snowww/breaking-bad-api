@@ -10,6 +10,7 @@ import { selectDataType } from '../../redux/reducers/data/dataSelectors';
 import { setFilter } from '../../redux/reducers/data/dataSlice';
 import { getData } from '../../redux/reducers/data/dataThunks';
 import DataPageLayout from '../DataPageLayout/DataPageLayout';
+import PropTypes from 'prop-types';
 
 export default function DataPage({ dataType }) {
    const dispatch = useDispatch();
@@ -50,3 +51,7 @@ export default function DataPage({ dataType }) {
 
    return <DataPageLayout />;
 }
+
+DataPage.propTypes = {
+   dataType: PropTypes.string.isRequired,
+};

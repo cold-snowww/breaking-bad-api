@@ -11,7 +11,7 @@ export default function Contacts({ fire, className, fixed }) {
       <div className={className ? `Contacts ${className}` : 'Contacts'}>
          <AriseAnimation
             fire={fire}
-            transitionType={animationTypes.FROM_RIGHT}
+            animationType={animationTypes.FROM_RIGHT}
             fixed={fixed}
             duration={300}
             delay={300}
@@ -27,7 +27,7 @@ export default function Contacts({ fire, className, fixed }) {
          </AriseAnimation>
          <AriseAnimation
             fire={fire}
-            transitionType={animationTypes.FROM_RIGHT}
+            animationType={animationTypes.FROM_RIGHT}
             fixed={fixed}
             duration={300}
             delay={400}
@@ -43,7 +43,7 @@ export default function Contacts({ fire, className, fixed }) {
          </AriseAnimation>
          <AriseAnimation
             fire={fire}
-            transitionType={animationTypes.FROM_RIGHT}
+            animationType={animationTypes.FROM_RIGHT}
             fixed={fixed}
             duration={300}
             delay={500}
@@ -63,4 +63,6 @@ export default function Contacts({ fire, className, fixed }) {
 
 Contacts.propTypes = {
    fire: PropTypes.bool,
+   className: PropTypes.string,
+   fixed: PropTypes.bool,
 };

@@ -119,7 +119,7 @@ export function payloadCreator_QuoteID(arg, helpers) {
    if (dataType !== dataTypes.QUOTE) return;
    const quotes = state.data.data;
    // Get random quote ID
-   const index = Math.round(Math.random() * quotes.length);
+   const index = Math.round(Math.random() * (quotes.length - 1));
    const randomID = quotes[index].quote_id;
    dispatch(setQuoteID(randomID));
 }

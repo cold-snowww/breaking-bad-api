@@ -117,14 +117,9 @@ describe('Testing payloadCreator_Data function', () => {
    test('Return cashed data from session storage', async () => {
       sessionStorage.setItem(dataTypes.CHARACTER, JSON.stringify(storedData));
 
-      const expectedValue = {
-         dataType: dataTypes.CHARACTER,
-         data: storedData,
-      };
-
       const result = await payloadCreator_Data(dataTypes.CHARACTER);
 
-      expect(result).toEqual(expectedValue);
+      expect(result).toEqual(storedData);
       sessionStorage.clear();
    });
    test('Fetching data from server and cashing data', async () => {
@@ -137,7 +132,6 @@ describe('Testing payloadCreator_Data function', () => {
       expect(data[0]).toHaveProperty('name');
       expect(data[0]).toHaveProperty('portrayed');
       expect(data[0]).toHaveProperty('nickname');
-      expect(fetchedData.dataType).toBe(dataTypes.CHARACTER);
 
       global.fetch = originalFetch;
    });

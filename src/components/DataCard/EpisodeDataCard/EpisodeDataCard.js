@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import DataCard from '../DataCard';
 import { BiMoviePlay } from 'react-icons/bi';
 
@@ -23,3 +24,13 @@ export default function EpisodeDataCard({ data }) {
       </DataCard>
    );
 }
+
+EpisodeDataCard.propTypes = {
+   data: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      season: PropTypes.string.isRequired,
+      air_date: PropTypes.string,
+      episode: PropTypes.string,
+      characters: PropTypes.arrayOf(PropTypes.string),
+   }),
+};

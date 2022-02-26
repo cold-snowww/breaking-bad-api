@@ -61,7 +61,7 @@ export default function WelcomePageLayout() {
                         fire={fire}
                         duration={300}
                         delay={200}
-                        transitionType={animationTypes.FROM_TOP}
+                        animationType={animationTypes.FROM_TOP}
                      >
                         <Header />
                      </AriseAnimation>

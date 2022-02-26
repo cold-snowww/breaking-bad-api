@@ -40,18 +40,3 @@ export const selectSearchValues = createSelector(
       return searchValues;
    }
 );
-
-// Select unique values of field
-// export const selectUniqValues = createSelector(
-//    selectData,
-//    selectFilter,
-//    (data, filter) => {
-//       const key = filter[0];
-//       if (!data || !key) return null;
-//       return data.reduce((prev, entity) => {
-//          const value = String(entity[key]);
-//          if (!prev.includes(value)) prev.push(value);
-//          return prev;
-//       }, []);
-//    }
-// );

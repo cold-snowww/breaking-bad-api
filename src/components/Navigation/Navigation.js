@@ -10,14 +10,13 @@ import AriseAnimation, {
 export default function Navigation() {
    const [ref, inView] = useInView({
       threshold: 0.8,
-      // triggerOnce: true,
    });
    return (
       <nav className="Navigation" ref={ref}>
          <AriseAnimation
             fire={inView}
             className="Navigation__linkWrapper"
-            transitionType={animationTypes.FROM_LEFT}
+            animationType={animationTypes.FROM_LEFT}
             delay={300}
             duration={400}
          >
@@ -31,7 +30,7 @@ export default function Navigation() {
          <AriseAnimation
             fire={inView}
             className="Navigation__linkWrapper"
-            transitionType={animationTypes.FROM_LEFT}
+            animationType={animationTypes.FROM_LEFT}
             delay={400}
             duration={400}
          >
@@ -45,7 +44,7 @@ export default function Navigation() {
          <AriseAnimation
             fire={inView}
             className="Navigation__linkWrapper"
-            transitionType={animationTypes.FROM_LEFT}
+            animationType={animationTypes.FROM_LEFT}
             delay={500}
             duration={400}
          >

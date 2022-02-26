@@ -1,6 +1,7 @@
 import ServicePage from '../ServicePage/ServicePage';
 import { AiOutlineBug } from 'react-icons/ai';
 import usePageTitle from '../../hooks/usePageTitle';
+import PropTypes from 'prop-types';
 
 export default function ErrorPage({ homelink, error }) {
    usePageTitle('Breaking Bad - Error');
@@ -28,3 +29,8 @@ export default function ErrorPage({ homelink, error }) {
       />
    );
 }
+
+ErrorPage.propTypes = {
+   homelink: PropTypes.bool,
+   error: PropTypes.instanceOf(Error),
+};

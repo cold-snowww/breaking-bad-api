@@ -1,5 +1,6 @@
 import DataCard from '../DataCard';
 import { BsChatLeftQuote } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 
 export default function QuoteDataCard({ data }) {
    return (
@@ -8,3 +9,10 @@ export default function QuoteDataCard({ data }) {
       </DataCard>
    );
 }
+
+QuoteDataCard.propTypes = {
+   data: PropTypes.shape({
+      author: PropTypes.string.isRequired,
+      quote: PropTypes.string.isRequired,
+   }),
+};
