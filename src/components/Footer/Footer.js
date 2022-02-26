@@ -6,7 +6,7 @@ export default function Footer() {
          <address className="Footer__creator">
             Designed by <a href="mailto:smtexx@hotmail.com">smTeXX</a>
          </address>
-         <p className="Footer__copyright">&copy;2022-2030</p>
+         <p className="Footer__copyright">&copy;2022-2025</p>
       </footer>
    );
 }
