@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/breaking-bad-api/static/css/main.75ae0ffa.css",
+    "main.js": "/breaking-bad-api/static/js/main.7df13e7e.js",
+    "static/media/background.jpg": "/breaking-bad-api/static/media/background.ca69ee5e488d0e1a7180.jpg",
+    "static/media/BreackingBad.otf": "/breaking-bad-api/static/media/BreackingBad.3513760cec3086c0167f.otf",
+    "static/media/ReadexPro-Bold.woff": "/breaking-bad-api/static/media/ReadexPro-Bold.8506978926447d08195f.woff",
+    "static/media/ReadexPro-Regular.woff": "/breaking-bad-api/static/media/ReadexPro-Regular.2bc8e3dcd512a34a23d1.woff",
+    "static/media/ReadexPro-Bold.woff2": "/breaking-bad-api/static/media/ReadexPro-Bold.01e6ed8adfb645caf3b0.woff2",
+    "static/media/ReadexPro-Regular.woff2": "/breaking-bad-api/static/media/ReadexPro-Regular.c00825ad38b733e90f6e.woff2",
+    "static/media/BreackingBad.woff": "/breaking-bad-api/static/media/BreackingBad.d68d11393665d57c2483.woff",
+    "static/media/BreackingBad.woff2": "/breaking-bad-api/static/media/BreackingBad.a9ec6705483f69a17083.woff2",
+    "index.html": "/breaking-bad-api/index.html",
+    "main.75ae0ffa.css.map": "/breaking-bad-api/static/css/main.75ae0ffa.css.map",
+    "main.7df13e7e.js.map": "/breaking-bad-api/static/js/main.7df13e7e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75ae0ffa.css",
+    "static/js/main.7df13e7e.js"
+  ]
+}
