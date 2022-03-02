@@ -8,6 +8,7 @@
    --fs-text: 1.6rem;
 
    @media screen and (min-width: $wxs) and (min-height: $hs) {
+      --fs-header: 4.5rem;
       --fs-subheader: 2.8rem;
       --fs-title: 2.2rem;
       --fs-text: 1.8rem;
