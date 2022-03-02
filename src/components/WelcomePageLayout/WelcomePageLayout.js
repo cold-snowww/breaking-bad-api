@@ -8,7 +8,7 @@ import { shallowEqual } from 'react-redux';
 import { setImageCashed } from '../../redux/reducers/app/appSlice';
 import { selectStatus } from '../../redux/reducers/data/dataSelectors';
 import { loadingStatus } from '../../redux/common';
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 import { setStatus } from '../../redux/reducers/data/dataSlice';
 import usePageTitle from '../../hooks/usePageTitle';
 import Header from '../Header/Header';
@@ -42,10 +42,10 @@ export default function WelcomePageLayout() {
    }, [imageCashed, appStatus, dispatch]);
 
    // Hide body scroll
-   useLayoutEffect(() => {
-      document.body.style.overflow = 'hidden';
-      return () => (document.body.style.overflow = '');
-   }, []);
+   // useLayoutEffect(() => {
+   //    document.body.style.overflow = 'hidden';
+   //    return () => (document.body.style.overflow = '');
+   // }, []);
 
    return (
       <>
@@ -89,7 +89,9 @@ export default function WelcomePageLayout() {
             onLoad={() => {
                if (!imageCashed) dispatch(setImageCashed(bgImage));
             }}
-            hidden
+            style={{
+               display: 'none',
+            }}
          />
       </>
    );
