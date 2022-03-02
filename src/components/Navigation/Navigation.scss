@@ -8,12 +8,8 @@
    padding: var(--in-normal);
    padding-bottom: 20px;
 
-   @media screen and (orientation: 'landscape') {
+   @media screen and (max-height: $ws) and (orientation: 'landscape') {
       grid-auto-flow: column;
       grid-auto-columns: 1fr;
-   }
-
-   @media screen and (min-height: $hm) {
-      grid-auto-flow: row;
    }
 }
